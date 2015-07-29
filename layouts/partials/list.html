@@ -1,0 +1,20 @@
+{{ partial "header.html" .}}
+
+<ol class="timeline">
+	{{ range .Data.Pages }}
+		<li class="tl-node">
+			<div class="tl-stamp">{{ .Date.Format "2006-01-02 15:04:05" | safeHTML }}</div>
+			<div class="tl-content">
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			</div>
+			{{ .Summary }}
+			{{ if .Truncated }}
+			  <div class="read-more-link">
+			    <a href="{{ .RelPermalink }}">...Read More...</a>
+			  </div>
+			{{ end }}
+		</li>
+	{{ end }}
+</ol>
+
+{{ partial "footer.html" .}}

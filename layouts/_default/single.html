@@ -1,0 +1,11 @@
+{{ partial "header.html" .}}
+
+<ol class="timeline">
+	<li class="tl-node">
+		<div class="tl-stamp">{{ .Date.Format "2006-01-02 15:04:05" | safeHTML }}</div>
+		<div class="tl-content">{{.Title}}</div>
+			{{ .Content }}
+	</li>
+</ol>
+
+{{ partial "footer.html" .}}

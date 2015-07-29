@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ .Site.Title }}</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/style.css" />
+</head>
+<body>
+
+<h1>
+	<a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a>
+	<label class="last_update">Updated on {{ .Site.LastChange.Format "2006-01-02 15:04:05" | safeHTML }}</label>
+</h1>
